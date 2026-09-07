@@ -127,3 +127,72 @@ Before → Discovery → Brand Axis → After で可視化する。
 ### Stored Date
 
 2026年9月8日
+
+## Implementation Preflight
+
+### Header
+
+Sticky Headerを正式採用する。
+
+- SP：tane Wordmark + Menu Button。CTAはMenu内を基本とする
+- PC：tane Wordmark + Navigation + CTA
+- Visual：Warm Off White系背景。必要な場合のみThin Border。強いShadowとGlassmorphismは使わない
+
+長いLPでCase Studyなど下部を読んでいるユーザーも主要NavigationとCTAへ戻りやすくしながら、Header自体はコンパクトに保ち、静かなEditorial Directionを維持するため。
+
+### Hero Layout
+
+- SP：Service Category → Main Copy → Sub Copy → CTA → SP Photo
+- PC 1024px以上：Full Photo + Left Overlay Copyを第一候補とし、この案から実装検証を開始する
+- PC Fallback：Photo + Text 2 Columns
+
+PCでは正式画像の左側にある静かな余白を活かし、写真とメッセージを一つの情景として伝える。Contrast不足、人物との干渉、1366 / 1440pxでの構図崩れ、可読性低下がある場合のみ2カラムへ変更する。
+
+### Color Direction
+
+| Role | Color |
+|---|---|
+| Background | `#F8F6F1` |
+| White | `#FFFEFB` |
+| Main Text | `#332F2A` |
+| Sub Text | `#6F6961` |
+| Border | `#D8D2C8` |
+| Main Accent | `#66705C` |
+| Warm Supporting | `#A1846B` |
+
+写真自体が色を担い、UIはWhite / Text / Thin Borderを中心とする。Accentを広い背景へ大量使用せず、ベージュ一色の画面にしない。実装時にContrastを確認し、必要な場合のみ微調整する。
+
+### Typography Direction
+
+- Heading：Serif系日本語書体。`Noto Serif JP`系候補
+- Body / UI：Sans Serif系日本語書体。`Noto Sans JP`系候補
+
+SerifはHero Main Copy、Section Heading、Brand Messageなどの世界観を担い、Sans Serifは本文、Navigation、Button、Form、FAQ、Planなどの情報理解を担う。ページ全体をSerifにはしない。具体的なFont Family、Weight、Loading方法は実装開始時に確定する。
+
+### Process PC Layout
+
+PCでもTalk → Discover → Define → Express → Growの時間順序を縦方向に維持する。横5カード / 横Timelineにはしない。
+
+Processは比較ではなく順番に意味がある工程情報であり、縦順の方が内容を自然に追え、Editorial Directionも維持できるため。PCでは左にSection Intro、右にVertical Listを置く2カラムを候補とする。
+
+### FAQ
+
+複数項目を同時に開けるAccordionを正式採用する。一つを開いても他を自動で閉じない。各質問は`button`を使い、`aria-expanded`、`aria-controls`、Keyboard操作、約44px以上のTap Targetへ対応する。
+
+### Contact Form
+
+ポートフォリオ用Demo Formとし、外部サービスやメールへの実送信は行わない。Validation成功後にページ内でSuccess Stateを表示し、架空サービスのため実際には送信されていないことを明示する。`label`、Error Message、`aria-live`、Focus Managementを検討する。
+
+### Image Optimization
+
+正式PNG原本を維持し、Mobile実装 → Responsive実装 → 実表示サイズ監査 → WebP最適化 → 最適化前後の容量記録の順で進める。
+
+レイアウト確定前に画像を最適化すると必要表示サイズを正しく判断できず、再生成や画質不足につながるため、WebP化はResponsive完成後のPerformance工程で行う。Heroは`picture`要素でSP / PCを切り替え、Lazy Loadしない。FV外は`loading="lazy"`と`decoding="async"`を検討する。
+
+### alt Direction
+
+すべての写真へ一律に詳しいaltを付けない。ページ理解に必要か、本文ですでに同じ意味を説明しているか、装飾目的かを周辺文脈から判断する。本文で工程を十分説明している画像は`alt=""`も候補とし、最終文言は実装時に決定する。
+
+### Decision Date
+
+2026年9月8日
