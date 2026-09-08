@@ -1,0 +1,130 @@
+<!doctype html>
+<html lang="ja">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>tane｜小さなお店のためのブランド伴走サービス</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500&amp;family=Noto+Serif+JP:wght@500;600&amp;display=swap"
+      rel="stylesheet"
+    >
+    <link rel="stylesheet" href="css/style.css">
+    <script src="js/main.js" defer></script>
+  </head>
+  <body>
+    <a class="skip-link" href="#main-content">本文へ移動する</a>
+
+    <header class="site-header">
+      <div class="site-header__inner">
+        <a class="site-header__wordmark" href="#main-content" aria-label="tane ホーム">
+          <img
+            src="assets/images/logo/tane_logo.png"
+            width="2172"
+            height="724"
+            alt="tane"
+          >
+        </a>
+
+        <button
+          class="menu-toggle"
+          type="button"
+          aria-expanded="false"
+          aria-controls="site-navigation"
+        >
+          <span class="menu-toggle__label">メニューを開く</span>
+          <span class="menu-toggle__icon" aria-hidden="true">
+            <span></span>
+            <span></span>
+          </span>
+        </button>
+
+        <nav id="site-navigation" class="site-nav" aria-label="メインメニュー">
+          <ul class="site-nav__list">
+            <li><a class="site-nav__link" href="#about">About <span aria-hidden="true">↘</span></a></li>
+            <li><a class="site-nav__link" href="#service">Service <span aria-hidden="true">↘</span></a></li>
+            <li><a class="site-nav__link" href="#case-study">Case Study <span aria-hidden="true">↘</span></a></li>
+            <li><a class="site-nav__link" href="#plan">Plan <span aria-hidden="true">↘</span></a></li>
+            <li><a class="site-nav__link" href="#faq">FAQ <span aria-hidden="true">↘</span></a></li>
+            <li><a class="site-nav__link" href="#contact">Contact <span aria-hidden="true">↘</span></a></li>
+          </ul>
+          <a class="site-nav__cta" href="#contact">お店のことを話してみる</a>
+        </nav>
+      </div>
+    </header>
+
+    <main id="main-content" tabindex="-1">
+      <section class="hero" aria-labelledby="hero-title">
+        <div class="hero__main">
+          <div class="hero__content">
+            <p class="hero__category">BRAND PARTNER FOR SMALL SHOPS</p>
+
+            <h1 id="hero-title" class="hero__title">
+              <span>整える前に、</span>
+              <span>見つけよう。</span>
+            </h1>
+
+            <div class="hero__copy">
+              <p>
+                店を始めた理由、<br>
+                選んできたもの、<br>
+                大切にしていること。
+              </p>
+              <p>そこから、伝え方の軸を一緒に見つけます。</p>
+            </div>
+
+            <a class="hero__cta" href="#contact">
+              <span>お店のことを話してみる</span>
+              <span aria-hidden="true">→</span>
+            </a>
+          </div>
+
+          <picture class="hero__media">
+            <source
+              media="(min-width: 1024px)"
+              srcset="assets/images/hero/hero_shop-owner-and-space_pc.png"
+              width="1672"
+              height="941"
+            >
+            <img
+              src="assets/images/hero/hero_shop-owner-and-space_sp.png"
+              width="1122"
+              height="1402"
+              alt="小さな個人店舗で商品を並べる店主の様子"
+              fetchpriority="high"
+            >
+          </picture>
+
+          <div class="hero__fade" aria-hidden="true"></div>
+        </div>
+
+        <div class="hero__sub-visuals" aria-hidden="true">
+          <div class="hero__sub-visuals-inner">
+            <img
+              src="assets/images/hero/hero_thumb_shop-interior.png"
+              width="1536"
+              height="1024"
+              alt=""
+              decoding="async"
+            >
+            <img
+              src="assets/images/hero/hero_thumb_baked-goods.png"
+              width="1536"
+              height="1024"
+              alt=""
+              decoding="async"
+            >
+            <img
+              src="assets/images/hero/hero_thumb_packaging.png"
+              width="1536"
+              height="1024"
+              alt=""
+              decoding="async"
+            >
+          </div>
+        </div>
+      </section>
+    </main>
+  </body>
+</html>
