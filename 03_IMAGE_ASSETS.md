@@ -18,7 +18,7 @@ taneでは写真を「おしゃれな店舗を見せる装飾」ではなく、
 
 ## Current Formal Asset List
 
-正式採用画像は14素材。2026年9月8日時点で全14素材を元PNGのまま格納済み。HeroのみSP / PC別画像とし、その他は原則SP / PC共通で使用する。
+正式採用ビジュアルは18素材（写真17点、ロゴ1点）。2026年9月8日時点で全18素材を元PNGのまま格納済み。Hero Main PhotoのみSP / PC別画像とし、その他は原則SP / PC共通で使用する。Hero Supporting Visual 3点はPC利用を基本候補とし、SPでの使用はResponsive検証後に判断する。
 
 | ID | Filename | Directory / Path | Role | Status | Dimensions | Format | SP / PC use | Formal status |
 |---:|---|---|---|---|---|---|---|---|
@@ -36,6 +36,10 @@ taneでは写真を「おしゃれな店舗を見せる装飾」ではなく、
 | 12 | `case_after_web.png` | `assets/images/case-study/case_after_web.png` | Case Study / After Web。ブランド軸を反映したWeb | FORMAL | 1586 × 992 px（約16:10） | PNG | SP / PC共通 | 正式採用済み・格納済み |
 | 13 | `case_after_social.png` | `assets/images/case-study/case_after_social.png` | Case Study / After Social。同じブランド軸を展開したSNS | FORMAL | 1122 × 1402 px（約4:5） | PNG | SP / PC共通 | 正式採用済み・格納済み |
 | 14 | `case_after_package-card.png` | `assets/images/case-study/case_after_package-card.png` | Case Study / After Package & Card。同じブランド軸を反映した紙もの・包装 | FORMAL | 1448 × 1086 px（4:3） | PNG | SP / PC共通 | 正式採用済み・格納済み |
+| 15 | `tane_logo.png` | `assets/images/logo/tane_logo.png` | Main Brand Wordmark / Header Logo | FORMAL | 2172 × 724 px（3:1） | PNG Alpha | SP / PC共通 | 正式採用済み・格納済み |
+| 16 | `hero_thumb_shop-interior.png` | `assets/images/hero/hero_thumb_shop-interior.png` | Hero Supporting Visual / Shop Interior | FORMAL | 1536 × 1024 px（3:2） | PNG | PC Hero Supporting Visualを基本候補。SPはResponsive検証後に判断 | 正式採用済み・格納済み |
+| 17 | `hero_thumb_baked-goods.png` | `assets/images/hero/hero_thumb_baked-goods.png` | Hero Supporting Visual / Baked Goods | FORMAL | 1536 × 1024 px（3:2） | PNG | PC Hero Supporting Visualを基本候補。SPはResponsive検証後に判断 | 正式採用済み・格納済み |
+| 18 | `hero_thumb_packaging.png` | `assets/images/hero/hero_thumb_packaging.png` | Hero Supporting Visual / Packaging | FORMAL | 1536 × 1024 px（3:2） | PNG | PC Hero Supporting Visualを基本候補。SPはResponsive検証後に判断 | 正式採用済み・格納済み |
 
 ### Previously Planned / Not in Current Formal Set
 
@@ -113,4 +117,4 @@ Before → 発見 → 判断軸 → 展開 のプロセスを可視化する。
 5. Deliverables
 6. Case Study 6 images
 
-格納済み14素材は、現段階では元PNGの画質・ピクセル寸法・形式を維持する。WebP変換、圧縮、リサイズはPerformance工程で実施する。
+格納済み18素材は、現段階では元PNGの画質・ピクセル寸法・形式を維持する。WebP変換、圧縮、リサイズはPerformance工程で実施する。

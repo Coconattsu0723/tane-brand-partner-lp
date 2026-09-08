@@ -73,7 +73,7 @@ taneは強く売り込むサービスではなく、
 
 ## 3. 正式採用候補画像一覧
 
-以下の14点を現時点の正式採用候補とする。正式採用・Web最適化の確定は、実装検証後に行う。
+以下の14点を当初の正式採用候補として整理した。2026年9月8日に正式ロゴ1点とHero Supporting Visual 3点を追加採用し、現在の正式ビジュアルは18点とする。正式な格納状況は `03_IMAGE_ASSETS.md` を正とする。
 
 ### tane本体
 
@@ -99,16 +99,31 @@ taneは強く売り込むサービスではなく、
 | 13 | `case_after_social.jpg` | Case Study / After Social | 同じブランド軸がSNSにも展開された状態を見せる |
 | 14 | `case_after_package-card.jpg` | Case Study / After Package / Card | 同じブランド軸が紙もの・包装にも反映された状態を見せる |
 
+### Logo / Hero Supporting Visuals
+
+| No. | ファイル名 | 用途 | 役割 |
+|---:|---|---|---|
+| 15 | `tane_logo.png` | Header / Footer | taneのMain Brand Wordmark |
+| 16 | `hero_thumb_shop-interior.png` | Hero / PC Supporting Visual | 店内と自然光、木の什器を補足する |
+| 17 | `hero_thumb_baked-goods.png` | Hero / PC Supporting Visual | 焼き菓子と商品の魅力を補足する |
+| 18 | `hero_thumb_packaging.png` | Hero / PC Supporting Visual | 包装、紙袋、タグなどの店舗接点を補足する |
+
 ---
 
 ## 4. セクションごとの画像使用方針
 
 ### Hero
 
-- SP：`hero_shop-owner-and-space_sp.jpg`
-- PC：`hero_shop-owner-and-space_pc.jpg`
+- SP Main Hero Photo：`hero_shop-owner-and-space_sp.png`
+- PC Main Hero Photo：`hero_shop-owner-and-space_pc.png`
+- PC Supporting Visual：
+  - Interior：`hero_thumb_shop-interior.png`
+  - Baked Goods：`hero_thumb_baked-goods.png`
+  - Packaging：`hero_thumb_packaging.png`
 
-HeroのみSP / PCで別画像を使う。FV全体の印象を決めるため、無理なトリミングで魅力を損なわないことを優先する。
+Hero Main PhotoのみSP / PCで別画像を使う。FV全体の印象を決めるため、無理なトリミングで魅力を損なわないことを優先する。
+
+PCではMain Hero Photoに加えてSupporting Visual 3点を小さく配置し、店内・商品・包装 / 店舗接点を補足する。Supporting VisualをSPで使用するかはResponsive検証後に判断する。
 
 ### Brand Philosophy
 
@@ -164,8 +179,9 @@ HeroのみSP / PCで別画像を使う。FV全体の印象を決めるため、�
 
 ### 正式方針
 
-- HeroのみSP / PCで別画像を使う
-- それ以外は原則として1画像を共通使用する
+- Hero Main PhotoのみSP / PCで別画像を使う
+- Hero Supporting Visual 3点はPC利用を基本候補とし、SPでの使用はResponsive検証後に判断する
+- それ以外の写真は原則として1画像を共通使用する
 - 表示差は、まずCSSとレイアウトで調整する
 - 実装後に破綻が出た場合のみ追加制作を検討する
 
@@ -468,8 +484,9 @@ FV外：
 
 ### Image
 
-- HeroのみSP / PC別画像を使う
-- その他は共通画像を使う
+- Hero Main PhotoのみSP / PC別画像を使う
+- Hero Supporting Visual 3点はPC利用を基本候補とする
+- その他の写真は共通画像を使う
 - 写真は装飾ではなく、店にある価値・日常・判断の痕跡を伝える証拠として使う
 
 ### Design

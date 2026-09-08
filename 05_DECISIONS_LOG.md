@@ -128,6 +128,48 @@ Before → Discovery → Brand Axis → After で可視化する。
 
 2026年9月8日
 
+## Logo Formalization
+
+### Decision
+
+tane正式Logoとして、lowercase Serif Wordmarkを採用する。
+
+### File
+
+`assets/images/logo/tane_logo.png`
+
+### Role
+
+Header / Footer等で使用するMain Wordmark。
+
+### Reason
+
+- Hero HeadingのSerif Directionと調和する
+- 小さなお店向けサービスの静かなEditorial感に合う
+- 装飾を増やさずブランド認知を作れる
+
+## Hero Supporting Visuals
+
+### Decision
+
+PC Hero下部のSupporting Visualとして、以下の3画像を正式採用する。
+
+- Shop Interior：`assets/images/hero/hero_thumb_shop-interior.png`
+- Baked Goods：`assets/images/hero/hero_thumb_baked-goods.png`
+- Packaging：`assets/images/hero/hero_thumb_packaging.png`
+
+### Purpose
+
+Hero Main Photoだけでは伝えきれない次の要素を、小さな3ビジュアルで補足する。
+
+- 店内
+- 商品
+- 包装 / 店舗接点
+
+これらは装飾目的ではなく、taneが扱う「店そのものの魅力」を短時間で伝えるために使用する。
+
+今回の追加正式化により、正式ビジュアルは写真17点とロゴ1点の合計18点となる。
+
 ## Implementation Preflight
 
 ### Header
