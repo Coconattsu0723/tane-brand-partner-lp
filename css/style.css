@@ -709,6 +709,180 @@ button {
   line-height: 2;
 }
 
+.case-study {
+  scroll-margin-top: var(--header-height);
+  padding-block: 7rem;
+  border-top: 1px solid var(--color-border);
+}
+
+.case-study__inner {
+  max-width: 48rem;
+}
+
+.case-study__heading {
+  max-width: 40rem;
+}
+
+.case-study__timeline {
+  margin: var(--space-16) 0 0;
+  padding: 0;
+  list-style: none;
+}
+
+.case-step + .case-step {
+  margin-top: var(--space-8);
+  padding-top: var(--space-12);
+  border-top: 1px solid var(--color-border);
+}
+
+.case-step__label {
+  display: flex;
+  margin: 0 0 var(--space-4);
+  align-items: center;
+  gap: var(--space-4);
+  color: var(--color-text-sub);
+  font-size: 0.6875rem;
+  font-weight: 600;
+  letter-spacing: 0.14em;
+  line-height: 1.5;
+  text-transform: uppercase;
+}
+
+.case-step__label span:first-child {
+  min-width: 1.5rem;
+  color: var(--color-accent);
+}
+
+.case-step__title {
+  margin: 0;
+  font-family: var(--font-heading);
+  font-size: clamp(1.75rem, 7.5vw, 2.125rem);
+  font-weight: 500;
+  letter-spacing: 0.04em;
+  line-height: 1.55;
+}
+
+.case-step__body {
+  max-width: 36rem;
+  margin: var(--space-6) 0 0;
+  color: var(--color-text-sub);
+  font-size: 0.9375rem;
+  letter-spacing: 0.02em;
+  line-height: 2;
+}
+
+.case-step__media {
+  margin-top: var(--space-8);
+}
+
+.case-step__media img,
+.case-after-item__media img {
+  width: 100%;
+  height: auto;
+}
+
+.case-axis {
+  margin-top: var(--space-8);
+  padding-block: var(--space-8);
+  border-top: 1px solid var(--color-border);
+  border-bottom: 1px solid var(--color-border);
+}
+
+.case-axis__label {
+  margin: 0 0 var(--space-3);
+  color: var(--color-text-sub);
+  font-size: 0.6875rem;
+  font-weight: 600;
+  letter-spacing: 0.14em;
+  line-height: 1.5;
+}
+
+.case-axis__statement {
+  margin: 0;
+  font-family: var(--font-heading);
+  font-size: 1.375rem;
+  font-weight: 500;
+  letter-spacing: 0.04em;
+  line-height: 1.8;
+}
+
+.case-axis__statement + .case-axis__label {
+  margin-top: var(--space-8);
+}
+
+.case-axis__keywords {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  border-top: 1px solid var(--color-border);
+}
+
+.case-axis__keywords li {
+  padding-block: var(--space-2);
+  border-bottom: 1px solid var(--color-border);
+  color: var(--color-text-sub);
+  font-size: 0.875rem;
+  letter-spacing: 0.06em;
+  line-height: 1.8;
+}
+
+.case-after {
+  margin-top: var(--space-12);
+}
+
+.case-after-item + .case-after-item {
+  margin-top: var(--space-8);
+  padding-top: var(--space-8);
+  border-top: 1px solid var(--color-border);
+}
+
+.case-after-item__label {
+  margin: 0 0 var(--space-3);
+  color: var(--color-accent);
+  font-size: 0.6875rem;
+  font-weight: 600;
+  letter-spacing: 0.14em;
+  line-height: 1.5;
+}
+
+.case-after-item__title {
+  margin: 0;
+  font-family: var(--font-heading);
+  font-size: 1.5rem;
+  font-weight: 500;
+  letter-spacing: 0.035em;
+  line-height: 1.65;
+}
+
+.case-after-item__body {
+  max-width: 34rem;
+  margin: var(--space-4) 0 0;
+  color: var(--color-text-sub);
+  font-size: 0.9375rem;
+  letter-spacing: 0.02em;
+  line-height: 2;
+}
+
+.case-after-item__media {
+  margin-top: var(--space-8);
+}
+
+.case-after-item--social .case-after-item__media {
+  width: 88%;
+  max-width: 22rem;
+}
+
+.case-study__conclusion {
+  max-width: 38rem;
+  margin: var(--space-16) 0 0;
+  padding-top: var(--space-8);
+  border-top: 1px solid var(--color-border);
+  font-family: var(--font-heading);
+  font-size: 1.125rem;
+  letter-spacing: 0.035em;
+  line-height: 2;
+}
+
 @media (hover: hover) {
   .site-header__wordmark:hover,
   .site-nav__link:hover {
@@ -910,7 +1084,8 @@ button {
   .problem,
   .philosophy,
   .service,
-  .deliverables {
+  .deliverables,
+  .case-study {
     padding-block: 9rem;
   }
 
@@ -941,7 +1116,8 @@ button {
   }
 
   .brand-change__inner,
-  .deliverables__inner {
+  .deliverables__inner,
+  .case-study__inner {
     max-width: 64rem;
   }
 }
