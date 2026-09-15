@@ -231,6 +231,22 @@ Processは比較ではなく順番に意味がある工程情報であり、縦�
 
 レイアウト確定前に画像を最適化すると必要表示サイズを正しく判断できず、再生成や画質不足につながるため、WebP化はResponsive完成後のPerformance工程で行う。Heroは`picture`要素でSP / PCを切り替え、Lazy Loadしない。FV外は`loading="lazy"`と`decoding="async"`を検討する。
 
+### Image Optimization Production Decision
+
+2026年9月15日のPerformance工程で、正式画像18点を次の方針により最適化した。
+
+- 正式PNG 18点はMaster Assetとして削除・上書きせず、原寸のまま維持する
+- Web本番では、同一basenameで生成したWebP 18点を使用する
+- 375 / 390 / 768 / 1024 / 1366 / 1440pxの実表示サイズを監査し、Retina 2xを必要解像度の基準とする
+- Hero SP / PCは元解像度を維持し、quality 88で画質を優先する
+- Philosophy、About、Deliverables、Case After Webなど細部が重要な写真はquality 86〜88を基本とする
+- Service、Case Study通常写真、Hero Supporting Visualはquality 82〜84を基本とし、表示寸法に対して過剰なピクセル数を削減する
+- Logoは最大表示幅128pxに対して512 × 171pxとし、透明エッジを維持するlossless WebPを採用する
+- Logoは206,797 bytesから12,200 bytesへ94.1%削減でき、透過品質を維持できるためPNG参照を継続しない
+- Production画像合計は36,852,110 bytesから1,971,458 bytesへ削減し、全体削減率は94.7%とする
+- HeroはLazy Loadせず`fetchpriority="high"`を維持する
+- Hero Supporting VisualはHero構成の一部として通常読み込みを維持し、FV外の写真は`loading="lazy"`と`decoding="async"`を維持する
+
 ### alt Direction
 
 すべての写真へ一律に詳しいaltを付けない。ページ理解に必要か、本文ですでに同じ意味を説明しているか、装飾目的かを周辺文脈から判断する。本文で工程を十分説明している画像は`alt=""`も候補とし、最終文言は実装時に決定する。

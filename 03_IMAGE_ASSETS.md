@@ -18,7 +18,7 @@ taneでは写真を「おしゃれな店舗を見せる装飾」ではなく、
 
 ## Current Formal Asset List
 
-正式採用ビジュアルは18素材（写真17点、ロゴ1点）。2026年9月8日時点で全18素材を元PNGのまま格納済み。Hero Main PhotoのみSP / PC別画像とし、その他は原則SP / PC共通で使用する。Hero Supporting Visual 3点はPC利用を基本候補とし、SPでの使用はResponsive検証後に判断する。
+正式採用ビジュアルは18素材（写真17点、ロゴ1点）。2026年9月8日時点で全18素材を元PNGのまま格納済み。Hero Main PhotoのみSP / PC別画像とし、その他は原則SP / PC共通で使用する。Hero Supporting Visual 3点はPC利用を基本候補とし、SPでの使用はResponsive検証後に判断する。2026年9月15日のPerformance工程で、PNGをMasterとして保持したままProduction用WebP 18点を追加し、Web参照をWebPへ切り替えた。
 
 | ID | Filename | Directory / Path | Role | Status | Dimensions | Format | SP / PC use | Formal status |
 |---:|---|---|---|---|---|---|---|---|
@@ -41,9 +41,40 @@ taneでは写真を「おしゃれな店舗を見せる装飾」ではなく、
 | 17 | `hero_thumb_baked-goods.png` | `assets/images/hero/hero_thumb_baked-goods.png` | Hero Supporting Visual / Baked Goods | FORMAL | 1536 × 1024 px（3:2） | PNG | PC Hero Supporting Visualを基本候補。SPはResponsive検証後に判断 | 正式採用済み・格納済み |
 | 18 | `hero_thumb_packaging.png` | `assets/images/hero/hero_thumb_packaging.png` | Hero Supporting Visual / Packaging | FORMAL | 1536 × 1024 px（3:2） | PNG | PC Hero Supporting Visualを基本候補。SPはResponsive検証後に判断 | 正式採用済み・格納済み |
 
+## Production Image Optimization
+
+- Optimization date: 2026年9月15日
+- Conversion tool: Sharp 0.35.4 / libwebp 1.6.0（Codex作業用ランタイム。プロジェクト依存には追加していない）
+- Master policy: 正式PNG 18点は原寸・ファイル内容を変更せず保持する
+- Production policy: Web表示では同一basenameのWebPを使用する
+- Resize basis: 375 / 390 / 768 / 1024 / 1366 / 1440pxでの最大CSS表示寸法とRetina 2xを基準にする
+- Quality policy: Heroと細部重視素材はquality 86〜88、通常写真はquality 82〜84、Logoは透過を保持したlossless WebPとする
+- Total: PNG Master 36,852,110 bytes → Production WebP 1,971,458 bytes（34,880,652 bytes / 94.7%削減）
+
+| ID | PNG Original Path | WebP Path | Original Dimensions | Max CSS / Retina 2x | WebP Dimensions | PNG Size | WebP Size | Reduction | Web Use Status |
+|---:|---|---|---:|---:|---:|---:|---:|---:|---|
+| 01 | `assets/images/hero/hero_shop-owner-and-space_sp.png` | `assets/images/hero/hero_shop-owner-and-space_sp.webp` | 1122 × 1402 | 768 × 768 / 1536 × 1536 | 1122 × 1402 | 2,024,069 B | 142,568 B | 93.0% | PRODUCTION |
+| 02 | `assets/images/hero/hero_shop-owner-and-space_pc.png` | `assets/images/hero/hero_shop-owner-and-space_pc.webp` | 1672 × 941 | 1095 × 668 / 2190 × 1336 | 1672 × 941 | 2,172,204 B | 208,930 B | 90.4% | PRODUCTION |
+| 03 | `assets/images/philosophy/philosophy_hands-and-notes.png` | `assets/images/philosophy/philosophy_hands-and-notes.webp` | 1536 × 1024 | 704 × 470 / 1408 × 940 | 1440 × 960 | 2,307,003 B | 132,488 B | 94.3% | PRODUCTION |
+| 04 | `assets/images/about/about_designer-working.png` | `assets/images/about/about_designer-working.webp` | 1122 × 1402 | 448 × 560 / 896 × 1120 | 896 × 1120 | 1,949,998 B | 79,186 B | 95.9% | PRODUCTION |
+| 05 | `assets/images/service/service_discover_conversation.png` | `assets/images/service/service_discover_conversation.webp` | 1536 × 1024 | 704 × 470 / 1408 × 940 | 1440 × 960 | 2,266,477 B | 108,464 B | 95.2% | PRODUCTION |
+| 06 | `assets/images/service/service_define_brand-sheet.png` | `assets/images/service/service_define_brand-sheet.webp` | 1536 × 1024 | 704 × 470 / 1408 × 940 | 1440 × 960 | 2,181,512 B | 111,608 B | 94.9% | PRODUCTION |
+| 07 | `assets/images/service/service_express_touchpoints.png` | `assets/images/service/service_express_touchpoints.webp` | 1536 × 1024 | 704 × 470 / 1408 × 940 | 1440 × 960 | 2,250,479 B | 104,272 B | 95.4% | PRODUCTION |
+| 08 | `assets/images/deliverables/deliverables_brand-sheet.png` | `assets/images/deliverables/deliverables_brand-sheet.webp` | 1448 × 1086 | 704 × 528 / 1408 × 1056 | 1448 × 1086 | 1,985,138 B | 126,608 B | 93.6% | PRODUCTION |
+| 09 | `assets/images/case-study/case_before_touchpoints.png` | `assets/images/case-study/case_before_touchpoints.webp` | 1448 × 1086 | 704 × 528 / 1408 × 1056 | 1448 × 1086 | 2,172,851 B | 122,124 B | 94.4% | PRODUCTION |
+| 10 | `assets/images/case-study/case_discovery_bakery-owner.png` | `assets/images/case-study/case_discovery_bakery-owner.webp` | 1536 × 1024 | 704 × 470 / 1408 × 940 | 1440 × 960 | 2,221,909 B | 110,908 B | 95.0% | PRODUCTION |
+| 11 | `assets/images/case-study/case_brand-axis-board.png` | `assets/images/case-study/case_brand-axis-board.webp` | 1448 × 1086 | 704 × 528 / 1408 × 1056 | 1448 × 1086 | 2,185,407 B | 157,976 B | 92.8% | PRODUCTION |
+| 12 | `assets/images/case-study/case_after_web.png` | `assets/images/case-study/case_after_web.webp` | 1586 × 992 | 706 × 442 / 1412 × 884 | 1586 × 992 | 1,934,955 B | 145,488 B | 92.5% | PRODUCTION |
+| 13 | `assets/images/case-study/case_after_social.png` | `assets/images/case-study/case_after_social.webp` | 1122 × 1402 | 403 × 504 / 806 × 1008 | 896 × 1120 | 2,041,527 B | 84,358 B | 95.9% | PRODUCTION |
+| 14 | `assets/images/case-study/case_after_package-card.png` | `assets/images/case-study/case_after_package-card.webp` | 1448 × 1086 | 717 × 538 / 1434 × 1076 | 1448 × 1086 | 2,202,409 B | 156,718 B | 92.9% | PRODUCTION |
+| 15 | `assets/images/logo/tane_logo.png` | `assets/images/logo/tane_logo.webp` | 2172 × 724 | 128 × 43 / 256 × 86 | 512 × 171 | 206,797 B | 12,200 B | 94.1% | PRODUCTION / LOSSLESS ALPHA |
+| 16 | `assets/images/hero/hero_thumb_shop-interior.png` | `assets/images/hero/hero_thumb_shop-interior.webp` | 1536 × 1024 | 335 × 224 / 670 × 448 | 768 × 512 | 2,310,315 B | 59,648 B | 97.4% | PRODUCTION |
+| 17 | `assets/images/hero/hero_thumb_baked-goods.png` | `assets/images/hero/hero_thumb_baked-goods.webp` | 1536 × 1024 | 335 × 224 / 670 × 448 | 768 × 512 | 2,179,626 B | 52,262 B | 97.6% | PRODUCTION |
+| 18 | `assets/images/hero/hero_thumb_packaging.png` | `assets/images/hero/hero_thumb_packaging.webp` | 1536 × 1024 | 335 × 224 / 670 × 448 | 768 × 512 | 2,259,434 B | 55,652 B | 97.5% | PRODUCTION |
+
 ### Previously Planned / Not in Current Formal Set
 
-次の2素材は初期計画に含まれていたが、現在の正式14素材には含めない。今回のコピー・代用・生成対象外とする。
+次の2素材は初期計画に含まれていたが、現在の正式18素材には含めない。今回のコピー・代用・生成対象外とする。
 
 | Filename | Previous role | Current status |
 |---|---|---|
@@ -117,4 +148,4 @@ Before → 発見 → 判断軸 → 展開 のプロセスを可視化する。
 5. Deliverables
 6. Case Study 6 images
 
-格納済み18素材は、現段階では元PNGの画質・ピクセル寸法・形式を維持する。WebP変換、圧縮、リサイズはPerformance工程で実施する。
+格納済み18素材の元PNGは、Masterとして画質・ピクセル寸法・形式を維持する。Web表示にはPerformance工程で生成した同一basenameのWebPを使用する。
