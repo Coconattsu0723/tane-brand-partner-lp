@@ -18,7 +18,7 @@ taneでは写真を「おしゃれな店舗を見せる装飾」ではなく、
 
 ## Current Formal Asset List
 
-正式採用ビジュアルは18素材（写真17点、ロゴ1点）。2026年9月8日時点で全18素材を元PNGのまま格納済み。Hero Main PhotoのみSP / PC別画像とし、その他は原則SP / PC共通で使用する。Hero Supporting Visual 3点はPC利用を基本候補とし、SPでの使用はResponsive検証後に判断する。2026年9月15日のPerformance工程で、PNGをMasterとして保持したままProduction用WebP 18点を追加し、Web参照をWebPへ切り替えた。
+ページ内の正式採用ビジュアルは18素材（写真17点、ロゴ1点）。2026年9月8日時点で全18素材を元PNGのまま格納済み。Hero Main PhotoのみSP / PC別画像とし、その他は原則SP / PC共通で使用する。Hero Supporting Visual 3点はPC利用を基本候補とし、SPでの使用はResponsive検証後に判断する。2026年9月15日のPerformance工程で、PNGをMasterとして保持したままProduction用WebP 18点を追加し、Web参照をWebPへ切り替えた。OGP / faviconはページ内ビジュアル18素材とは分け、Metadata Assetとして管理する。
 
 | ID | Filename | Directory / Path | Role | Status | Dimensions | Format | SP / PC use | Formal status |
 |---:|---|---|---|---|---|---|---|---|
@@ -40,6 +40,21 @@ taneでは写真を「おしゃれな店舗を見せる装飾」ではなく、
 | 16 | `hero_thumb_shop-interior.png` | `assets/images/hero/hero_thumb_shop-interior.png` | Hero Supporting Visual / Shop Interior | FORMAL | 1536 × 1024 px（3:2） | PNG | PC Hero Supporting Visualを基本候補。SPはResponsive検証後に判断 | 正式採用済み・格納済み |
 | 17 | `hero_thumb_baked-goods.png` | `assets/images/hero/hero_thumb_baked-goods.png` | Hero Supporting Visual / Baked Goods | FORMAL | 1536 × 1024 px（3:2） | PNG | PC Hero Supporting Visualを基本候補。SPはResponsive検証後に判断 | 正式採用済み・格納済み |
 | 18 | `hero_thumb_packaging.png` | `assets/images/hero/hero_thumb_packaging.png` | Hero Supporting Visual / Packaging | FORMAL | 1536 × 1024 px（3:2） | PNG | PC Hero Supporting Visualを基本候補。SPはResponsive検証後に判断 | 正式採用済み・格納済み |
+
+## Metadata and Social Preview Assets
+
+2026年9月16日に、SNS共有表示とブラウザ識別に使用するMetadata Asset 4点を正式格納した。ページ本文で使用する正式18素材のカウントには含めない。
+
+| ID | Filename | Path | Dimensions | Format | Role | Status |
+|---:|---|---|---:|---|---|---|
+| M01 | `ogp_tane.png` | `assets/images/ogp/ogp_tane.png` | 1200 × 630 px | PNG | OGP / X Large Image Card共通のSocial Preview | FORMAL |
+| M02 | `favicon-48.png` | `assets/images/favicon/favicon-48.png` | 48 × 48 px | PNG | 高密度環境を含むBrowser Tab Icon | FORMAL |
+| M03 | `favicon-32.png` | `assets/images/favicon/favicon-32.png` | 32 × 32 px | PNG | 標準Browser Tab Icon | FORMAL |
+| M04 | `favicon.ico` | `assets/images/favicon/favicon.ico` | 32 × 32 px / 48 × 48 px | ICO（PNG 2サイズ内包） | Favicon互換フォーマット | FORMAL |
+
+- OGP source: `ChatGPT Image 2026年9月16日 00_51_01.png`（1731 × 909 px）を、完成デザインと中心位置を維持して1200 × 630 pxへ変換した
+- Favicon source: `ChatGPT Image 2026年9月16日 00_57_30.png`（1254 × 1254 px）を、デザインを変更せず32px / 48pxへ縮小した
+- Public URL確定前のため、`og:image`と`twitter:image`はプロジェクト相対パスを使用する。公開時に絶対URLへ更新する
 
 ## Production Image Optimization
 

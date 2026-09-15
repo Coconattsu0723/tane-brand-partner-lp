@@ -247,6 +247,18 @@ Processは比較ではなく順番に意味がある工程情報であり、縦�
 - HeroはLazy Loadせず`fetchpriority="high"`を維持する
 - Hero Supporting VisualはHero構成の一部として通常読み込みを維持し、FV外の写真は`loading="lazy"`と`decoding="async"`を維持する
 
+### Metadata and Social Preview
+
+2026年9月16日に、MetadataとSocial Previewを次の方針で正式化した。
+
+- titleは「tane｜小さなお店のためのブランド伴走サービス」とする
+- descriptionは「店を始めた理由や、大切にしていることから「店らしさ」を見つけ、言葉とデザインの軸へ。taneは、小さなお店のWeb・SNS・写真・紙ものまで一貫して整えるブランド伴走サービスです。」とする
+- OGP画像は、taneのWordmark、Service Category、Main Copy、店主と店舗空間を一枚で伝えられる正式ビジュアルを採用する
+- OGP / X共通画像はSNS共有で標準的に扱いやすい1200 × 630 pxのPNGとする
+- faviconは、縮小時にもブランドを識別しやすい「t」のBrand Markを採用し、32px / 48px PNGと両サイズを内包したICOを用意する
+- canonicalと`og:url`は、公開URL確定後に同一の正式URLを設定する。それまでは仮のGitHub Pages URLを推測で記載しない
+- `og:image`と`twitter:image`は公開前のみプロジェクト相対パスを使用し、公開時に絶対URLへ更新する
+
 ### alt Direction
 
 すべての写真へ一律に詳しいaltを付けない。ページ理解に必要か、本文ですでに同じ意味を説明しているか、装飾目的かを周辺文脈から判断する。本文で工程を十分説明している画像は`alt=""`も候補とし、最終文言は実装時に決定する。
