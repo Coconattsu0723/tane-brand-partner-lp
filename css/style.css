@@ -1668,8 +1668,8 @@ button {
   }
 
   .hero {
-    min-height: calc(100svh - var(--header-height));
-    padding-bottom: var(--space-16);
+    min-height: 0;
+    padding-bottom: 0;
   }
 
   .hero__main {
@@ -1837,6 +1837,10 @@ button {
   .section-title {
     font-size: clamp(2.5rem, 3.25vw, 2.75rem);
     line-height: 1.5;
+  }
+
+  .problem {
+    padding-top: 8rem;
   }
 
   .problem-insight__inner {
