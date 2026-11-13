@@ -425,36 +425,6 @@ button {
   line-height: 1.8;
 }
 
-.problem-insight {
-  border-block: 1px solid var(--color-border);
-}
-
-.problem-insight__inner {
-  padding-block: 7rem;
-}
-
-.problem-insight__title {
-  margin: 0;
-  font-family: var(--font-heading);
-  font-size: clamp(2rem, 8.5vw, 2.5rem);
-  font-weight: 500;
-  letter-spacing: 0.06em;
-  line-height: 1.65;
-}
-
-.problem-insight__title span {
-  display: block;
-}
-
-.problem-insight__copy {
-  max-width: 30rem;
-  margin: var(--space-8) 0 0;
-  color: var(--color-text-sub);
-  font-size: 0.9375rem;
-  letter-spacing: 0.02em;
-  line-height: 2;
-}
-
 .philosophy {
   padding-block: 7rem;
 }
@@ -501,12 +471,13 @@ button {
   border-top: 1px solid var(--color-border);
 }
 
-.service__heading {
-  max-width: 40rem;
+.service__heading,
+.case-study__heading {
+  text-align: center;
 }
 
 .service__steps {
-  margin: var(--space-16) 0 0;
+  margin: var(--space-12) 0 0;
   padding: 0;
   list-style: none;
 }
@@ -723,18 +694,14 @@ button {
   max-width: 48rem;
 }
 
-.case-study__heading {
-  max-width: 40rem;
-}
-
 .case-study__timeline {
-  margin: var(--space-16) 0 0;
+  margin: var(--space-12) 0 0;
   padding: 0;
   list-style: none;
 }
 
 .case-step + .case-step {
-  margin-top: var(--space-8);
+  margin-top: var(--space-6);
   padding-top: var(--space-12);
   border-top: 1px solid var(--color-border);
 }
@@ -1561,10 +1528,6 @@ button {
     padding-block: 8rem;
   }
 
-  .problem-insight__inner {
-    padding-block: 8rem;
-  }
-
   .who-its-for__inner,
   .plan__inner {
     max-width: 64rem;
@@ -1798,11 +1761,6 @@ button {
     padding-block: 10rem;
   }
 
-  .problem-insight__inner {
-    max-width: 56rem;
-    padding-block: 10rem;
-  }
-
   .problem__list {
     max-width: 64rem;
   }
@@ -1843,15 +1801,6 @@ button {
     padding-top: 8rem;
   }
 
-  .problem-insight__inner {
-    max-width: 60rem;
-  }
-
-  .problem-insight__title {
-    font-size: clamp(2.75rem, 4vw, 3.25rem);
-    line-height: 1.6;
-  }
-
   .problem .section-inner {
     display: grid;
     max-width: 72rem;
@@ -1880,22 +1829,6 @@ button {
     --container-width: 80rem;
 
     max-width: 80rem;
-  }
-
-  .service__heading {
-    max-width: 44rem;
-  }
-
-  .service__steps {
-    margin-top: 6rem;
-  }
-
-  .service-step {
-    padding-bottom: 5rem;
-  }
-
-  .service-step + .service-step {
-    padding-top: 5rem;
   }
 
   .service-step__content {
@@ -1999,21 +1932,8 @@ button {
     max-width: 80rem;
   }
 
-  .case-study__heading {
-    max-width: 48rem;
-  }
-
   .case-study__heading .section-title {
     font-size: clamp(2.75rem, 3.6vw, 3rem);
-  }
-
-  .case-study__timeline {
-    margin-top: 6rem;
-  }
-
-  .case-step + .case-step {
-    margin-top: var(--space-16);
-    padding-top: 6rem;
   }
 
   .case-step:not(.case-step--after) {
