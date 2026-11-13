@@ -677,15 +677,6 @@ button {
   letter-spacing: 0.08em;
 }
 
-.deliverables__supporting {
-  max-width: 36rem;
-  margin: var(--space-8) 0 0;
-  color: var(--color-text-sub);
-  font-size: 0.875rem;
-  letter-spacing: 0.025em;
-  line-height: 2;
-}
-
 .case-study {
   scroll-margin-top: var(--header-height);
   padding-block: 7rem;
@@ -908,14 +899,17 @@ button {
 }
 
 .who-its-for__supporting,
-.process__supporting,
-.plan__note {
+.process__supporting {
   max-width: 36rem;
   margin: var(--space-8) 0 0;
   color: var(--color-text-sub);
   font-size: 0.875rem;
   letter-spacing: 0.025em;
   line-height: 2;
+}
+
+.plan__heading .section-intro {
+  max-width: none;
 }
 
 .process__steps {
@@ -1158,8 +1152,7 @@ button {
   margin-top: var(--space-8);
 }
 
-.about__role,
-.contact__form-label {
+.about__role {
   margin: 0;
   color: var(--color-accent);
   font-size: 0.6875rem;
@@ -1167,6 +1160,14 @@ button {
   letter-spacing: 0.14em;
   line-height: 1.6;
   text-transform: uppercase;
+}
+
+.about__name {
+  margin: 0 0 var(--space-6);
+  font-family: var(--font-heading);
+  font-size: 1.5rem;
+  font-weight: 500;
+  line-height: 1.5;
 }
 
 .about__copy,
@@ -1280,12 +1281,7 @@ button {
   background: var(--color-white);
 }
 
-.contact__intro {
-  max-width: 40rem;
-}
-
 .contact__copy {
-  max-width: 34rem;
   margin: var(--space-8) 0 0;
   color: var(--color-text-sub);
   font-size: 0.9375rem;
@@ -1324,17 +1320,8 @@ button {
   border-top: 1px solid var(--color-border);
 }
 
-.contact__form-heading h3 {
-  margin: var(--space-3) 0 0;
-  font-family: var(--font-heading);
-  font-size: clamp(1.5rem, 6.5vw, 1.875rem);
-  font-weight: 500;
-  letter-spacing: 0.04em;
-  line-height: 1.65;
-}
-
-.contact__form-heading > p:last-child {
-  margin: var(--space-4) 0 0;
+.contact__form-area > p {
+  margin: 0;
   color: var(--color-text-sub);
   font-size: 0.8125rem;
   letter-spacing: 0.02em;
@@ -1342,6 +1329,7 @@ button {
 }
 
 .contact-form {
+  scroll-margin-top: calc(var(--header-height) + var(--space-4));
   margin-top: var(--space-12);
 }
 
@@ -1724,6 +1712,8 @@ button {
     display: block;
     width: 100%;
     margin-top: 1.75rem;
+    padding-bottom: var(--space-8);
+    background-color: var(--color-bg);
   }
 
   .hero__sub-visuals-inner {
@@ -1738,8 +1728,6 @@ button {
   .hero__sub-visuals img {
     width: 100%;
     aspect-ratio: 3 / 2;
-    opacity: 0.82;
-    filter: saturate(0.88) contrast(0.96);
     object-fit: cover;
   }
 
@@ -1886,7 +1874,6 @@ button {
     max-width: 72rem;
     align-items: start;
     grid-template-columns: minmax(28rem, 1.08fr) minmax(20rem, 0.92fr);
-    grid-template-rows: auto auto 1fr;
     column-gap: clamp(var(--space-12), 6vw, 6rem);
   }
 
@@ -1895,20 +1882,32 @@ button {
     grid-row: 1;
   }
 
+  .deliverables__intro,
   .deliverables__media {
-    margin-top: 0;
-    grid-column: 1;
-    grid-row: 1 / span 3;
-    align-self: center;
+    margin-top: var(--space-6);
   }
 
-  .deliverables__list {
-    margin-top: var(--space-12);
+  .deliverables__intro {
     grid-column: 2;
     grid-row: 2;
   }
 
-  .deliverables__supporting {
+  .deliverables__media {
+    position: relative;
+    grid-column: 1;
+    grid-row: 2 / 4;
+    align-self: stretch;
+  }
+
+  .deliverables__media img {
+    position: absolute;
+    inset: 0;
+    height: 100%;
+    aspect-ratio: auto;
+  }
+
+  .deliverables__list {
+    margin-top: var(--space-12);
     grid-column: 2;
     grid-row: 3;
   }
@@ -2099,21 +2098,7 @@ button {
   }
 
   .contact__inner {
-    display: grid;
-    max-width: 72rem;
-    align-items: start;
-    grid-template-columns: minmax(18rem, 0.78fr) minmax(28rem, 1.22fr);
-    column-gap: clamp(var(--space-16), 7vw, 7rem);
-  }
-
-  .contact__form-area {
-    margin-top: 0;
-    padding-top: 0;
-    border-top: 0;
-  }
-
-  .contact__form-heading h3 {
-    font-size: clamp(1.5rem, 2.4vw, 1.875rem);
+    max-width: 64rem;
   }
 
   .contact__intro .section-title {

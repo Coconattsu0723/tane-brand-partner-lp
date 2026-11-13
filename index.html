@@ -342,11 +342,12 @@
           <header class="section-heading deliverables__heading">
             <p class="section-label">DELIVERABLES</p>
             <h2 id="deliverables-title" class="section-title">お渡しするもの</h2>
-            <p class="section-intro">
-              対話で見つけた内容は、これからの制作や発信に使える<br>
-              「tane Brand Sheet」としてお渡しします。
-            </p>
           </header>
+
+          <p class="section-intro deliverables__intro">
+            対話で見つけた内容は、これからの制作や発信に使える<br>
+            「tane Brand Sheet」としてお渡しします。
+          </p>
 
           <div class="deliverables__media">
             <img
@@ -371,10 +372,6 @@
             <li><span aria-hidden="true">09</span><span>写真の方針</span></li>
             <li><span aria-hidden="true">10</span><span>ウェブ・SNSでの活用例</span></li>
           </ol>
-
-          <p class="deliverables__supporting">
-            制作のたびに迷ったとき、このBrand Sheetへ立ち返り、店らしい選択を重ねていけます。
-          </p>
         </div>
       </section>
 
@@ -634,8 +631,7 @@
             <p class="section-label">PLAN</p>
             <h2 id="plan-title" class="section-title">プランと料金</h2>
             <p class="section-intro">
-              店らしさの土台を整えるプランと、<br>
-              Webで伝わる形までつなげるプランがあります。
+              店らしさの土台を整えるプランと、Webで伝わる形までつなげるプランがあります。
             </p>
           </header>
 
@@ -704,10 +700,6 @@
             </article>
           </div>
 
-          <p class="plan__note">
-            どちらのプランも、今あるものをすべて作り直すことを前提にしていません。お店の状況と、これから必要な範囲を一緒に確認します。
-          </p>
-
           <a class="plan__cta" href="#contact">
             <span>お店のことを話してみる</span>
             <span aria-hidden="true">→</span>
@@ -739,13 +731,18 @@
           </div>
 
           <div class="about__profile">
-            <p class="about__role">Brand Designer / Web Designer</p>
+            <p class="about__role">ブランド・Webデザイナー</p>
+            <h3 class="about__name">森川 紬（もりかわ つむぎ）</h3>
+            <p class="about__copy">
+              焼き菓子店で接客と販促を担当し、季節商品の案内やショップカードを制作。その後、Web制作会社で飲食店や生活雑貨店のサイト制作に携わりました。独立後は「tane」として、個人店のブランドづくりとWeb制作を手がけています。
+            </p>
             <p class="about__copy">
               つくるものを先に決めるのではなく、店を始めた理由や、日々大切にしていることを聞くところから始めます。
             </p>
             <p class="about__supporting">
               店主の中にある感覚を置き去りにせず、これからも自分たちで選び、育てていける形へ一緒に整えます。
             </p>
+            <p class="about__supporting">※このプロフィールは架空の設定です。</p>
           </div>
         </div>
       </section>
@@ -913,9 +910,7 @@
             <p class="section-label">CONTACT</p>
             <h2 id="contact-title" class="section-title">ご相談・お問い合わせ</h2>
             <p class="contact__copy">
-              お店を始めた理由や、<br>
-              大切にしていること。<br><br>
-              まずは、今のお店について聞かせてください。
+              お店を始めた理由や、大切にしていること。まずは、今のお店について聞かせてください。
             </p>
 
             <ul class="contact__conditions" aria-label="初回相談の条件">
@@ -924,20 +919,16 @@
               <li>無料</li>
             </ul>
 
-            <a class="contact__cta" href="#contact-form-title">
+            <a class="contact__cta" href="#contact-form">
               <span>お店のことを話してみる</span>
               <span aria-hidden="true">↓</span>
             </a>
           </div>
 
           <div class="contact__form-area">
-            <div class="contact__form-heading">
-              <p class="contact__form-label">30 MINUTES / ONLINE</p>
-              <h3 id="contact-form-title">相談したいことを、聞かせてください。</h3>
-              <p id="contact-demo-note">こちらはポートフォリオ用のデモフォームです。入力内容が外部へ送信されることはありません。</p>
-            </div>
+            <p id="contact-demo-note">こちらはポートフォリオ用のデモフォームです。入力内容が外部へ送信されることはありません。</p>
 
-            <form class="contact-form" novalidate aria-describedby="contact-demo-note">
+            <form id="contact-form" class="contact-form" novalidate aria-describedby="contact-demo-note">
               <div class="form-field">
                 <label for="contact-name">名前 <span class="form-field__status">必須</span></label>
                 <input
