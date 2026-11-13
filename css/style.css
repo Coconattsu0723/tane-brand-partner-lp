@@ -2,6 +2,7 @@
 
 :root {
   --color-bg: #f8f6f1;
+  --color-section-green: #edf2e9;
   --color-white: #fffefb;
   --color-text: #332f2a;
   --color-text-sub: #6f6961;
@@ -386,6 +387,10 @@ button {
   line-height: 2;
 }
 
+#main-content > section:nth-of-type(even) {
+  background-color: var(--color-section-green);
+}
+
 .problem {
   padding-block: 7rem 6rem;
 }
@@ -604,34 +609,18 @@ button {
 
 .brand-change__transition {
   display: grid;
-  align-items: center;
-  grid-template-columns: minmax(var(--space-6), 1fr) auto minmax(var(--space-6), 1fr);
-  gap: var(--space-4);
-}
-
-.brand-change__transition::before,
-.brand-change__transition::after {
-  height: 1px;
-  background: var(--color-border);
-  content: "";
-}
-
-.brand-change__transition p {
-  margin: 0;
-  color: var(--color-text-sub);
-  font-size: 0.75rem;
-  letter-spacing: 0.06em;
-  line-height: 1.8;
-  text-align: center;
-}
-
-.brand-change__supporting {
-  max-width: 36rem;
-  margin: var(--space-8) 0 0;
-  color: var(--color-text-sub);
-  font-size: 0.875rem;
-  letter-spacing: 0.025em;
-  line-height: 2;
+  place-items: center;
+  align-self: center;
+  justify-self: center;
+  width: 3rem;
+  aspect-ratio: 1;
+  margin-inline: auto;
+  border: 1px solid var(--color-border);
+  border-radius: 50%;
+  color: var(--color-accent);
+  font-size: 1.5rem;
+  line-height: 1;
+  transform: rotate(90deg);
 }
 
 .deliverables {
@@ -659,27 +648,32 @@ button {
 }
 
 .deliverables__list {
-  margin: var(--space-16) 0 0;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(min(100%, 11rem), 1fr));
+  gap: var(--space-3);
+  margin: var(--space-8) 0 0;
   padding: 0;
   list-style: none;
-  border-top: 1px solid var(--color-border);
 }
 
 .deliverables__list li {
   display: grid;
-  padding-block: var(--space-3);
-  border-bottom: 1px solid var(--color-border);
-  grid-template-columns: 2rem minmax(0, 1fr);
-  gap: var(--space-4);
+  grid-template-columns: auto minmax(0, 1fr);
+  align-items: baseline;
+  gap: var(--space-3);
+  padding: var(--space-4);
+  border: 1px solid var(--color-border);
+  border-radius: 0.375rem;
+  background: var(--color-white);
   font-size: 0.9375rem;
-  letter-spacing: 0.025em;
-  line-height: 1.8;
+  font-weight: 600;
+  line-height: 1.6;
 }
 
 .deliverables__list li span:first-child {
-  padding-top: 0.125rem;
-  color: var(--color-text-sub);
-  font-size: 0.6875rem;
+  color: var(--color-accent);
+  font-size: 0.75rem;
+  font-variant-numeric: tabular-nums;
   letter-spacing: 0.08em;
 }
 
@@ -1669,7 +1663,7 @@ button {
   }
 
   .hero__title {
-    font-size: clamp(3rem, 4.45vw, 4rem);
+    font-size: clamp(2.75rem, 3.8vw, 3.625rem);
     letter-spacing: 0.1em;
     line-height: 1.45;
   }
@@ -1876,7 +1870,7 @@ button {
 
   .brand-change__comparison {
     display: grid;
-    grid-template-columns: minmax(0, 1fr) minmax(8rem, 0.34fr) minmax(0, 1fr);
+    grid-template-columns: minmax(0, 1fr) 3rem minmax(0, 1fr);
   }
 
   .brand-change__state {
@@ -1884,20 +1878,7 @@ button {
   }
 
   .brand-change__transition {
-    padding-block: var(--space-8);
-    grid-template-columns: 1fr;
-    grid-template-rows: minmax(var(--space-8), 1fr) auto minmax(var(--space-8), 1fr);
-  }
-
-  .brand-change__transition::before,
-  .brand-change__transition::after {
-    width: 1px;
-    height: 100%;
-    justify-self: center;
-  }
-
-  .brand-change__supporting {
-    margin-left: auto;
+    transform: none;
   }
 
   .deliverables__inner {
